@@ -744,6 +744,7 @@ document.querySelectorAll('.acc-item').forEach(item=>{const q=item.querySelector
 
 /* ===== Demo modal + qualification routing ===== */
 const CALENDLY_URL = ""; /* TODO: paste your Calendly link, e.g. "https://calendly.com/engineered-arts/demo" */
+const REDIRECT = { enabled:false, vip:'/thank-you-vip/', standard:'/thank-you/' }; /* set enabled:true for production redirects to the real pages */
 const VIP_THRESHOLD = 8; /* tune the fast-track bar here (max score 10) */
 const modal=document.getElementById('demoModal');
 const ty=document.getElementById('tyOverlay');
@@ -786,8 +787,8 @@ document.getElementById('mSubmit').addEventListener('click',()=>{
  const v={seg:document.getElementById('mUse').value,role:document.getElementById('mRole').value,time:document.getElementById('mTime').value,fund:document.getElementById('mFund').value};
  const vip=isVip(v);
  const first=document.getElementById('mFirst').value.trim()||'there';
- /* PRODUCTION: POST lead + score to HubSpot here, then redirect to a real page:
-    window.location.href = vip ? '/thank-you-vip' : '/thank-you'; */
+ /* PRODUCTION: POST lead + score to HubSpot here (see hubspotSubmit spec), then route: */
+ if(REDIRECT.enabled){window.location.href=(vip?REDIRECT.vip:REDIRECT.standard)+'?fn='+encodeURIComponent(first);return;}
  document.getElementById('vipName').textContent=first;
  document.getElementById('stdName').textContent=first;
  closeModal(); showTY(vip);
