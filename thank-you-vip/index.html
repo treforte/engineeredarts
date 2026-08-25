@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<title>You're all set — schedule your demo | Engineered Arts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{--bg:#08090B;--bg2:#0F1114;--dim:#A7B1BE;--dim2:#7C8794;--peri:#8FAAD9;--peri2:#AFC6EC;--glow:rgba(143,170,217,.22);--line:rgba(255,255,255,.12);--line2:rgba(255,255,255,.20);--disp:"Sora",system-ui,sans-serif;--body:"Inter",system-ui,sans-serif;--mono:"JetBrains Mono",monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:radial-gradient(90% 60% at 50% 0%,#12161c,var(--bg));color:#EEF1F5;font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh}
+  a{color:inherit}
+  .inner{max-width:720px;margin:0 auto;padding:46px 24px 90px;min-height:100vh;display:flex;flex-direction:column}
+  .logo{align-self:center;margin-bottom:38px;display:inline-flex;flex-direction:column;align-items:center;line-height:1;font-family:var(--disp);font-weight:700;letter-spacing:.14em;color:#fff}
+  .logo .l1{font-size:.92rem;padding-bottom:3px;border-bottom:2px solid var(--peri)}
+  .logo .l2{font-size:.92rem;margin-top:3px;letter-spacing:.34em}
+  .card{background:var(--bg2);border:1px solid var(--line2);border-radius:20px;padding:46px 42px;text-align:center}
+  .badge{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--peri);border:1px solid rgba(143,170,217,.42);background:var(--glow);border-radius:100px;padding:8px 16px;margin-bottom:22px}
+  h1{font-family:var(--disp);font-weight:700;font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.1;letter-spacing:-.02em;color:#fff;margin-bottom:14px}
+  .p{color:var(--dim);font-size:1.05rem;max-width:52ch;margin:0 auto 22px}
+  .cal-mount{margin:24px 0}
+  .cal-placeholder{border:2px dashed var(--line2);border-radius:14px;padding:44px 26px;color:var(--dim);font-family:var(--mono);font-size:.82rem;line-height:1.6}
+  .cal-placeholder b{color:var(--peri);display:block;margin-bottom:8px;font-family:var(--disp);font-size:1.05rem}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--disp);font-weight:700;font-size:1rem;padding:15px 28px;border-radius:100px;cursor:pointer;border:1px solid transparent;background:linear-gradient(180deg,#83A2DC,#6688CE);color:#0b1220;transition:transform .15s,box-shadow .2s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 14px 40px -12px var(--glow)}
+  .btn:focus-visible,a:focus-visible{outline:2px solid var(--peri2);outline-offset:3px}
+  .recap{list-style:none;display:inline-grid;gap:10px;text-align:left;margin:20px auto 0}
+  .recap li{display:flex;gap:10px;align-items:flex-start;color:#E7ECF2;font-size:.95rem}
+  .recap li::before{content:"\2713";color:var(--peri);font-weight:700}
+  .second{margin-top:22px;font-size:.92rem;color:var(--dim)}
+  .foot{margin-top:38px;text-align:center;font-family:var(--mono);font-size:.74rem;color:var(--dim2)}
+  .foot a{color:var(--peri);text-decoration:underline;margin:0 8px}
+  @media(max-width:560px){.card{padding:32px 22px}}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+  <div class="inner">
+    <a href="https://engineeredarts.com" class="logo" aria-label="Engineered Arts"><span class="l1">ENGINEERED</span><span class="l2">ARTS</span></a>
+    <div class="card">
+      <div class="badge">● Priority fit · fast-track</div>
+      <h1>You're a great fit, <span id="fn">there</span>. Let's get you on the calendar.</h1>
+      <p class="p">Skip the wait — pick a time that works and meet an Engineered Arts specialist for a demo built around your use case.</p>
+      <div class="cal-mount" id="calMount"></div>
+      <a class="btn" id="calBtn" style="display:none" target="_blank" rel="noopener">Choose a time</a>
+      <p class="second">Prefer we reach out instead? We'll email you within one business day regardless.</p>
+      <ul class="recap">
+        <li>30-minute live demo with a specialist</li>
+        <li>Your use case + an Agent Builder workflow, built live</li>
+        <li>Pricing, grant-fit and next steps</li>
+      </ul>
+    </div>
+    <div class="foot"><a href="https://engineeredarts.com">Back to engineeredarts.com</a> · <a href="https://engineeredarts.com/downloads">Downloads</a></div>
+  </div>
+
+<script>
+  /* === CONFIG === */
+  const CALENDLY_URL = ""; /* TODO: paste your Calendly link, e.g. "https://calendly.com/engineered-arts/demo" */
+
+  /* Personalize greeting from ?fn= */
+  const fn=new URLSearchParams(location.search).get('fn');
+  if(fn) document.getElementById('fn').textContent=fn;
+
+  /* Mount Calendly (or a labeled placeholder until the link is added) */
+  (function(){
+    const m=document.getElementById('calMount');
+    if(CALENDLY_URL){
+      const url=CALENDLY_URL+(fn?('?name='+encodeURIComponent(fn)):'');
+      m.innerHTML='<div class="calendly-inline-widget" data-url="'+url+'" style="min-width:320px;height:660px;"></div>';
+      const s=document.createElement('script');s.src='https://assets.calendly.com/assets/external/widget.js';s.async=true;document.body.appendChild(s);
+      const b=document.getElementById('calBtn');b.href=url;b.style.display='inline-flex';
+    }else{
+      m.innerHTML='<div class="cal-placeholder"><b>Calendly scheduler loads here</b>Paste your booking link into CALENDLY_URL above and this becomes a live, self-serve scheduler. Only priority-fit leads ever reach this page.</div>';
+    }
+  })();
+
+  /* CONVERSION TRACKING — fire a distinct, higher-value conversion for fast-track leads
+     TODO: replace with your real gtag/GTM conversion IDs
+     gtag('event','conversion',{send_to:'AW-XXXX/vip_demo_request'});
+     window.dataLayer=window.dataLayer||[]; dataLayer.push({event:'demo_request',lead_tier:'VIP'}); */
+</script>
+</body>
+</html>
