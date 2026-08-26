@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Desktop Humanoid Robots for Institutions | Engineered Arts</title>
-<meta name="description" content="Ameca, Ami & Azi Desktop hold a real conversation in a crowd, speak 70+ languages, run no-code AI workflows, and start at $19,950 — built for research labs, universities, STEM programs and museums." />
+<meta name="description" content="Ameca, Ami & Azi Desktop hold a real conversation in a crowd, speak 70+ languages, and run no-code AI workflows — built for research labs, universities, STEM programs and museums. Book a demo." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -245,6 +245,12 @@
   .form-success h3{margin-bottom:8px}
   .err{border-color:#e5713b!important}
 
+  .invest-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .invest{background:var(--paper);border:1px solid var(--line-l);border-radius:var(--r);padding:28px 26px}
+  .invest .ic{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;background:rgba(143,170,217,.14);border:1px solid rgba(110,143,203,.35);color:var(--peri-deep);font-size:1.1rem;margin-bottom:16px}
+  .invest h3{color:var(--ink);margin-bottom:8px}
+  .invest p{font-size:.95rem;color:var(--ink-soft)}
+  @media(max-width:920px){.invest-cards{grid-template-columns:1fr}}
   /* demo section extras */
   .expect{list-style:none;display:grid;gap:12px;margin:22px 0 24px}
   .expect li{display:flex;gap:11px;align-items:flex-start;color:#E7ECF2;font-size:.98rem}
@@ -342,7 +348,7 @@
     <div class="left">Since 2004 · 30+ countries</div>
     <a href="#top" class="logo dark" aria-label="Engineered Arts"><span class="l1">ENGINEERED</span><span class="l2">ARTS</span></a>
     <div class="right">
-      <a href="#pricing" class="signin">Pricing</a>
+      <a href="#investment" class="signin">Pricing</a>
       <a href="#demo" class="btn btn-primary btn-sm">Book a Demo</a>
     </div>
   </div>
@@ -354,7 +360,7 @@
     <div>
       <span class="eyebrow" id="heroEyebrow">Embodied AI · Desktop Humanoid Robots</span>
       <h1>Humanoid robotics your people can <span class="peri">actually talk to.</span></h1>
-      <p class="lead">Ameca, Ami and Azi Desktop hold a real conversation in a crowd, speak 70+ languages, and run autonomous AI workflows with no code — now from $19,950, fundable by a research grant, STEM budget, or pilot.</p>
+      <p class="lead">Ameca, Ami and Azi Desktop hold a real conversation in a crowd, speak 70+ languages, and run autonomous AI workflows with no code — built for research labs, universities, STEM programs and museums.</p>
       <div class="hero-cta">
         <a href="#demo" class="btn btn-primary">Book a Demo</a>
         <a href="#icp" class="btn btn-ghost-d">See it in your world</a>
@@ -482,7 +488,7 @@
       <div class="fcard"><span class="n">03</span><h3>Autonomous AI workflows</h3><p>The no-code Agent Builder connects your LLM and MCP connectors. Tools run deterministically — it acts, not just talks.</p><span class="metric">Bring-your-own-LLM · MCP</span></div>
       <div class="fcard"><span class="n">04</span><h3>Speaks the room's language</h3><p>Fluent in 70+ languages with native-level pronunciation and authentic accents — keyboard-free access for everyone.</p><span class="metric">70+ languages · natural accents</span></div>
       <div class="fcard"><span class="n">05</span><h3>Running before first period</h3><p>The first Engineered Arts product with Wi-Fi and mobile-app setup — no wired-Ethernet constraint on placement.</p><span class="metric">Setup under 5 minutes</span></div>
-      <div class="fcard"><span class="n">06</span><h3>A price a budget can carry</h3><p>Self-serve hardware from $19,950. The six-figure barrier is gone — this fits a grant, a STEM line item, or a pilot.</p><span class="metric">~$50K all-in vs $100K+ before</span></div>
+      <div class="fcard"><span class="n">06</span><h3>Institution-grade governance</h3><p>Role-based access, immutable audit logging, time-bounded support and a Privacy Centre — built on the secure Tritium suite.</p><span class="metric">RBAC · GDPR / CCPA aligned</span></div>
     </div>
   </div>
 </section>
@@ -526,25 +532,20 @@
   </div>
 </section>
 
-<!-- PRICING -->
-<section id="pricing" class="light">
-  <div class="wrap price-grid">
-    <div class="price-copy">
-      <span class="eyebrow">Pricing</span>
-      <h2 style="margin-top:16px">The "it's too expensive" objection now has an answer.</h2>
-      <p class="lead">The prior generation started north of <span class="strike">$100,000</span>. Gen 3 self-serve hardware starts at $19,950 — putting a genuine social humanoid inside a research grant, a STEM department budget, or an enterprise pilot for the first time.</p>
-      <div class="hero-cta" style="margin-top:26px"><a href="#demo" class="btn btn-primary" data-intent="quote">Request a quote</a></div>
+<!-- INVESTMENT -->
+<section id="investment" class="light">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">How pricing works</span>
+      <h2 style="margin-top:16px">Straightforward pricing, tailored to your setup.</h2>
+      <p>Gen 3 was re-engineered to fit real institutional budgets. Tell us a little about your program and we'll walk you through a clear, tailored quote on your first call — so pricing is never a surprise in the demo.</p>
     </div>
-    <div class="price-card">
-      <div class="kick">Mesmer Desktop · Gen 3</div>
-      <div class="figure">$19,950<small> hardware, self-serve</small></div>
-      <div class="sub">Ameca · Ami · Azi Desktop — same Gen 3 stack, your choice of embodiment.</div>
-      <div class="price-line"><span>Typical all-in with software</span><b>~$50,000</b></div>
-      <div class="price-line"><span>AI tokens</span><b>Annual allowance included</b></div>
-      <div class="price-line"><span>Top-up bundles</span><b>Never expire</b></div>
-      <div class="price-line"><span>Setup</span><b>Under 5 minutes</b></div>
-      <div class="then">Figures for guidance — final quote confirmed with your team.</div>
+    <div class="invest-cards">
+      <div class="invest"><div class="ic">&#9671;</div><h3>Purchase or rent</h3><p>Buy outright or rent for an event, term or pilot — whichever fits how your program is funded.</p></div>
+      <div class="invest"><div class="ic">&#9137;</div><h3>Software &amp; AI included</h3><p>Your subscription includes an annual AI token allowance, and top-up bundles never expire. No surprise metering.</p></div>
+      <div class="invest"><div class="ic">&#8594;</div><h3>A quote, not a guessing game</h3><p>Share your budget range in the form and we'll tailor the quote to it — no back-and-forth.</p></div>
     </div>
+    <div class="hero-cta" style="justify-content:center;margin-top:32px"><a href="#demo" class="btn btn-primary" data-intent="quote">Get your tailored quote</a></div>
   </div>
 </section>
 
@@ -573,7 +574,7 @@
         <li>A quick response to your inquiry — within 1 business day</li>
         <li>A 30-minute live demo with an Engineered Arts specialist</li>
         <li>A walkthrough of your use case and a live Agent Builder workflow</li>
-        <li>Pricing, grant-fit and clear next steps</li>
+        <li>Transparent pricing, tailored to your setup</li>
       </ul>
       <div class="hero-cta" style="margin-top:6px"><button class="btn btn-primary js-open-demo" data-intent="demo">Book a Demo</button></div>
       <figure class="quote">
@@ -592,7 +593,7 @@
   <div class="wrap foot">
     <a href="#top" class="logo dark"><span class="l1">ENGINEERED</span><span class="l2">ARTS</span></a>
     <p>The global leader in social humanoid robotics · © 2026 Engineered Arts Ltd</p>
-    <div class="flinks"><a href="#icp">Use cases</a><a href="#pricing">Pricing</a><a href="#demo">Book a demo</a></div>
+    <div class="flinks"><a href="#icp">Use cases</a><a href="#investment">Pricing</a><a href="#demo">Book a demo</a></div>
   </div>
 </footer>
 
@@ -629,13 +630,13 @@
       </div>
     </div>
     <div class="frow">
-      <div class="finput"><label for="mFund">Funding <span class="req">*</span></label>
-        <select id="mFund"><option value="">Select…</option><option value="secured">Budget / grant secured</option><option value="planning">Budget being planned</option><option value="none">No budget yet</option><option value="unsure">Not sure yet</option></select>
+      <div class="finput"><label for="mBudget">Budget range <span class="req">*</span></label>
+        <select id="mBudget"><option value="">Select…</option><option value="b50">$50k+ / multiple units</option><option value="b2050">$20k–$50k</option><option value="bu20">Under $20k</option><option value="bexplore">Exploring / not yet set</option></select>
       </div>
-      <div class="finput"><label for="mPhone">Phone <span class="opt">optional</span></label><input id="mPhone" type="tel" placeholder="+1" /></div>
+      <div class="finput"><label for="mPhone">Phone <span class="req">*</span></label><input id="mPhone" type="tel" placeholder="+1" /></div>
     </div>
     <label class="consent" id="consentRow"><input id="mConsent" type="checkbox" /> <span>I agree to receive communications from the Engineered Arts team about this request. <span class="req">*</span></span></label>
-    <p class="form-err" id="mErr">Please complete the highlighted fields to continue.</p>
+    <p class="form-err" id="mErr">Please check the highlighted fields to continue.</p>
     <button class="btn btn-primary" id="mSubmit">Book my demo</button>
     <p class="privacy">No obligation. We'll only use your details to arrange the demo, per our Privacy Policy.</p>
   </div>
@@ -656,7 +657,7 @@
       <ul class="ty-recap">
         <li>30-minute live demo with a specialist</li>
         <li>Your use case + an Agent Builder workflow, built live</li>
-        <li>Pricing, grant-fit and next steps</li>
+        <li>Tailored pricing and next steps</li>
       </ul>
     </div>
 
@@ -668,10 +669,10 @@
         <li>A quick response — within 1 business day</li>
         <li>A 30-minute live demo with a specialist</li>
         <li>A walkthrough of your specific use case</li>
-        <li>Pricing, grant-fit and next steps</li>
+        <li>Tailored pricing and next steps</li>
       </ul>
       <div class="ty-quote">&ldquo;It's fascinating to see a human-sized robot — the exhibit that resonates the most.&rdquo;<b>Rose O'Reilly · We The Curious, Bristol UK</b></div>
-      <p class="ty-second" style="margin-top:24px"><a href="#pricing" id="stdPricing">See pricing while you wait &rarr;</a></p>
+      <p class="ty-second" style="margin-top:24px"><a href="#investment" id="stdPricing">See how pricing works &rarr;</a></p>
     </div>
 
     <div class="ty-toggle">Demo preview only · <a href="#" id="tyToggle">see the other outcome</a> · <a href="#" id="tyBack">back to site</a></div>
@@ -679,7 +680,7 @@
 </div>
 
 <div class="sticky-cta">
-  <a href="#pricing" class="btn btn-ghost-d btn-sm">Pricing</a>
+  <a href="#investment" class="btn btn-ghost-d btn-sm">Pricing</a>
   <a href="#demo" class="btn btn-primary btn-sm">Book a Demo</a>
 </div>
 
@@ -709,9 +710,9 @@ const ICPS={
  k12:{key:"2",chip:"K-12 & Charter",eyebrow:"For K-12 & charter schools",
   title:"The STEM centerpiece students line up to talk to",
   narr:"A social humanoid turns an abstract “AI” unit into something students can look in the eye and question. Wi-Fi setup in under five minutes means it's running before first period — and the price now fits a STEM line item or grant.",
-  bullets:["Under-5-minute Wi-Fi setup — no IT project required","Speaks 70+ languages, keyboard-free — accessible to every student","From $19,950; fundable by STEM budgets and education grants"],
+  bullets:["Under-5-minute Wi-Fi setup — no IT project required","Speaks 70+ languages, keyboard-free — accessible to every student","Runs all day with zero coding — no dedicated staff required"],
   flow:"It runs the lesson and the open house. The robot <b>teaches the AI unit</b>, <b>answers each student</b> at their grade level, then <b>greets families in their language</b> on enrollment night.",
-  payoff:"The showpiece students talk about at dinner and parents remember on decision day — engagement that fills seats and justifies the STEM grant, with zero IT overhead.",
+  payoff:"The showpiece students talk about at dinner and parents remember on decision day — engagement that fills seats and justifies the STEM budget, with zero IT overhead.",
   model:"Ami or Azi Desktop",why:"Approachable persona and visual identity that lands with younger audiences."},
  museum:{key:"3",chip:"Museum & Science Center",eyebrow:"For museums & science centers",
   title:"An exhibit that holds a conversation with a crowd",
@@ -771,20 +772,21 @@ const SCORE={
  segment:{res_uni:2,ai_lab:2,cs:2,k12:2,museum:2,enterprise:2,other:0},
  role:{pi:2,head:2,proc:2,researcher:2,teacher:2,student:-3,other:0},
  timeline:{q:3,m36:2,m612:1,explore:0},
- funding:{secured:3,planning:2,none:0,unsure:1}
+ budget:{b50:3,b2050:3,bu20:0,bexplore:1}
 };
-function scoreLead(v){return (SCORE.segment[v.seg]||0)+(SCORE.role[v.role]||0)+(SCORE.timeline[v.time]||0)+(SCORE.funding[v.fund]||0);}
-function isVip(v){return scoreLead(v)>=VIP_THRESHOLD && v.role!=='student' && (v.time==='q'||v.time==='m36') && (v.fund==='secured'||v.fund==='planning');}
+function scoreLead(v){return (SCORE.segment[v.seg]||0)+(SCORE.role[v.role]||0)+(SCORE.timeline[v.time]||0)+(SCORE.budget[v.budget]||0);}
+function isVip(v){return scoreLead(v)>=VIP_THRESHOLD && v.role!=='student' && (v.time==='q'||v.time==='m36') && (v.budget==='b2050'||v.budget==='b50');}
 
 document.getElementById('mSubmit').addEventListener('click',()=>{
- const ids=['mFirst','mLast','mEmail','mOrg','mUse','mRole','mTime','mFund'];
+ const ids=['mFirst','mLast','mEmail','mOrg','mPhone','mUse','mRole','mTime','mBudget'];
  let ok=true; ids.forEach(id=>{const el=document.getElementById(id);el.classList.remove('err');if(!el.value.trim()){el.classList.add('err');ok=false;}});
  const em=document.getElementById('mEmail'); if(em.value.trim()&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value)){em.classList.add('err');ok=false;}
+ const ph=document.getElementById('mPhone'); const pd=ph.value.replace(/[^0-9]/g,''); if(ph.value.trim()&&(pd.length<7||pd.length>15)){ph.classList.add('err');ok=false;}
  const consent=document.getElementById('mConsent'), crow=document.getElementById('consentRow');
  if(!consent.checked){crow.classList.add('err-text');ok=false;}else{crow.classList.remove('err-text');}
  document.getElementById('mErr').classList.toggle('show',!ok);
  if(!ok)return;
- const v={seg:document.getElementById('mUse').value,role:document.getElementById('mRole').value,time:document.getElementById('mTime').value,fund:document.getElementById('mFund').value};
+ const v={seg:document.getElementById('mUse').value,role:document.getElementById('mRole').value,time:document.getElementById('mTime').value,budget:document.getElementById('mBudget').value};
  const vip=isVip(v);
  const first=document.getElementById('mFirst').value.trim()||'there';
  /* PRODUCTION: POST lead + score to HubSpot here (see hubspotSubmit spec), then route: */
